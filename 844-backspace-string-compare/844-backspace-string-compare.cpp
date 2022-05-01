@@ -1,7 +1,6 @@
 class Solution {
 public:
     bool backspaceCompare(string s, string t) {
-
         string s1="";
         string t1="";
         
@@ -17,8 +16,8 @@ public:
                }   
             else t1+=t[i];
         }
-        cout<<"H\n";
-        cout<<s1<<" "<<t1;
+        // cout<<"H\n";
+        // cout<<s1<<" "<<t1;
         return s1==t1;
     }
 };
