@@ -17,9 +17,10 @@ public:
                 int num=i->second;
                 while(m2[num]!=0 && num >0){
                     num--;
+                    res++;
                 }
-                int temp=i->second-num;
-                res+=temp;
+                // int temp=i->second-num;
+                // res+=temp;
                 m2[num]=1;
             }
         }
