@@ -16,18 +16,15 @@ public:
             for(j=0;j<people.size();j++){
                 
                 if(count<=0) break;
-                // cout<<j<<" ";
                 if(temp[j][0]==-1 || temp[j][0]>=a) {
                     count--;
                     pos=j+1;
                 }
                 
             }
-            // cout<<"H\n";
             while(temp[pos][0]!=-1){
                 pos++;
             }
-            // cout<<"P:"<<pos<<"\n";
             temp[pos]=people[i];
         }
         
