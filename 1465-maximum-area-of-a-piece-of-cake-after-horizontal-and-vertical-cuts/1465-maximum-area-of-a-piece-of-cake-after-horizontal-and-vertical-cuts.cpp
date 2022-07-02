@@ -17,11 +17,11 @@ public:
         a=max(a,h-horizontalCuts[horizontalCuts.size()-1]);
         b=max(b,w-verticalCuts[verticalCuts.size()-1]);
         // cout<<1E9;
-        int m=1e9+7;
+        // int m=1e9+7;
         // cout<<m;
-        long long a1=a%m;
-        long long b1=b%m;
-        long long sol=a1*b1;
-        return sol%m;
+        // long long a1=a%m;
+        // long long b1=b%m;
+        // long long sol=a1*b1;
+        return (1LL*a*b)%int(1e9+7);
     }
 };
