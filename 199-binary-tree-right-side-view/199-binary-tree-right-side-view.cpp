@@ -11,20 +11,28 @@
  */
 class Solution {
 public:
-    vector<int> solve(vector<int> res,TreeNode *root,int lvl){
-        if(root == NULL){
-            return res;
+    void solve(vector<int> &res,TreeNode *root,int lvl){
+        // if(root == NULL){
+        //     return res;
+        // }
+        // if(res.size()==lvl){
+        //     res.push_back(root->val);
+        // }
+        // res= solve(res,root->right,lvl+1);
+        // res= solve(res,root->left,lvl+1);
+        // return res;
+        if(root!= NULL){
+            if(res.size()==lvl){
+                res.push_back(root->val);
+            }
+            solve(res,root->right,lvl+1);
+            solve(res,root->left,lvl+1);
         }
-        if(res.size()==lvl){
-            res.push_back(root->val);
-        }
-        res= solve(res,root->right,lvl+1);
-        res= solve(res,root->left,lvl+1);
-        return res;
+        
     }
     vector<int> rightSideView(TreeNode* root) {
         vector<int> res;
-        res=solve(res,root,0);
+        solve(res,root,0);
         return res;
     }
 };
