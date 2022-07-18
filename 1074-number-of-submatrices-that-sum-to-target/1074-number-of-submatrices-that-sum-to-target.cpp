@@ -8,7 +8,7 @@ public:
         for(int i=0;i<arr.size();++i){
             sum+=arr[i];
             if(sum==target){
-                ans++;
+                ++ans;
             }
             if(mp.find(sum-target)!=mp.end()){
                 ans+=mp[sum-target];
