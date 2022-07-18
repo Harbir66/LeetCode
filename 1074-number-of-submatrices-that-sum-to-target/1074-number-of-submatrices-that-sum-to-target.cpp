@@ -3,7 +3,7 @@ public:
     int helper(vector<int>& arr,int target){
         int ans=0;
         int sum=0;
-        map<int,int> mp;
+        unordered_map<int,int> mp;
         
         for(int i=0;i<arr.size();i++){
             sum+=arr[i];
