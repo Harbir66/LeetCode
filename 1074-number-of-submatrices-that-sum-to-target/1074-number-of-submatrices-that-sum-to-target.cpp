@@ -5,7 +5,7 @@ public:
         int sum=0;
         unordered_map<int,int> mp;
         
-        for(int i=0;i<arr.size();i++){
+        for(int i=0;i<arr.size();++i){
             sum+=arr[i];
             if(sum==target){
                 ans++;
@@ -22,10 +22,10 @@ public:
         int ans=0;
         int n=matrix.size();
         int m=matrix[0].size();
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;++i){
             vector<int> temp(m,0);
-            for(int j=i;j<n;j++){
-                for(int k=0;k<m;k++){
+            for(int j=i;j<n;++j){
+                for(int k=0;k<m;++k){
                     temp[k]+=matrix[j][k];
                 }
                 ans+=helper(temp,target);
