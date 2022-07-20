@@ -20,14 +20,14 @@ public:
                         break;
                     }
                 }
-                if(mp.find(words[i])==mp.end())
+                if(mp[words[i]]==0)
                     mp[words[i]]=0;    
             }
             
         }
-        // for(auto i=mp.begin();i!=mp.end();i++){
-        //     cout<<i->first<<" : "<<i->second<<"\n";
-        // }
+        for(auto i=mp.begin();i!=mp.end();i++){
+            cout<<i->first<<" : "<<i->second<<"\n";
+        }
         return res;
     }
 };
