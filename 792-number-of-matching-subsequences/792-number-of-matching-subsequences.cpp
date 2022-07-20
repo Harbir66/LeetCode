@@ -3,14 +3,14 @@ public:
     int numMatchingSubseq(string s, vector<string>& words) {
         map<string,int> mp;
         int res=0;
-        for(int i=0;i<words.size();i++){
+        for(int i=0;i<words.size();++i){
             if(mp.find(words[i])!=mp.end()){
                 res+=mp[words[i]];
                 // break;
             }
             else{
                 string t=words[i];
-                for(int j=s.size()-1;j>=0;j--){
+                for(int j=s.size()-1;j>=0;--j){
                     if(s[j]==t.back()){
                         t.pop_back();
                     }
