@@ -2,11 +2,11 @@ class Solution {
 public:
     int numMatchingSubseq(string s, vector<string>& words) {
         map<string,int> mp;
+        
         int res=0;
         for(int i=0;i<words.size();++i){
             if(mp.find(words[i])!=mp.end()){
                 res+=mp[words[i]];
-                // break;
             }
             else{
                 string t=words[i];
@@ -25,9 +25,9 @@ public:
             }
             
         }
-        for(auto i=mp.begin();i!=mp.end();i++){
-            cout<<i->first<<" : "<<i->second<<"\n";
-        }
+        // for(auto i=mp.begin();i!=mp.end();i++){
+        //     cout<<i->first<<" : "<<i->second<<"\n";
+        // }
         return res;
     }
 };
