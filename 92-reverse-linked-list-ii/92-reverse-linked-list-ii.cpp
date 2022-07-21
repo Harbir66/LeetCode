@@ -16,11 +16,11 @@ public:
         ListNode* prev=temp;
         ListNode* curr=NULL;
         ListNode* succ=NULL;
-        for(int i=0;i<left-1;i++){
+        for(int i=0;i<left-1;++i){
              prev=prev->next;  
         }
         curr=prev->next;
-        for(int i=0;i<right-left;i++){
+        for(int i=0;i<right-left;++i){
             succ=curr->next;
             curr->next=succ->next;
             succ->next=prev->next;
