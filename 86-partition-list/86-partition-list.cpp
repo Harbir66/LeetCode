@@ -13,7 +13,7 @@ public:
     ListNode* partition(ListNode* head, int x) {
         ListNode* dummy=new ListNode(0);
         ListNode* temp=NULL;
-        ListNode* dummy2=new ListNode(-1);
+        ListNode* dummy2=new ListNode(0);
         ListNode* temp2=NULL;
         ListNode* prev=NULL;
         dummy->next=head;
