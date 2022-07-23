@@ -25,7 +25,7 @@ public:
             temp[k++]=arr[j++];
         }
         
-        for(int left = l; left <= r; left++)
+        for(int left = l; left <= r; ++left)
             arr[left] = temp[left - l];
     }
     void mergeSort(int l,int r,vector<pair<int,int>>& arr, vector<int>& counts){
@@ -42,7 +42,7 @@ public:
         vector<pair<int,int>> arr;
         vector<int> counts(n,0);
         
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;++i){
             arr.push_back({nums[i],i});
         }
         
