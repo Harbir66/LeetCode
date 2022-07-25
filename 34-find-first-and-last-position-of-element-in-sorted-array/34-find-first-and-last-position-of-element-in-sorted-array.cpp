@@ -3,10 +3,9 @@ public:
     vector<int> searchRange(vector<int>& nums, int target) {
         int l=0;
         int r=nums.size()-1;
-        int m;
         vector<int> res(2,-1);
         while(l<=r){
-            m=l+(r-l)/2;
+            int m=l+(r-l)/2;
             if(nums[m]==target){
                 res[0]=m;
                 res[1]=m;
