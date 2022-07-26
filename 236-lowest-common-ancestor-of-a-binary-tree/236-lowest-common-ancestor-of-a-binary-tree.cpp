@@ -9,17 +9,13 @@
  */
 class Solution {
 public:
-    TreeNode* help(TreeNode* root,TreeNode* p,TreeNode* q){
-        if(root==NULL) return NULL;
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if(!root) return root;
         if(root ==p || root == q) return root;
-        TreeNode* left=help(root->left,p,q);
-        TreeNode* right=help(root->right,p,q);
+        TreeNode* left=lowestCommonAncestor(root->left,p,q);
+        TreeNode* right=lowestCommonAncestor(root->right,p,q);
         if(left && right ) return root;
         
         return left?left:right;
-        
-    }
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        return help(root,p,q);
     }
 };
