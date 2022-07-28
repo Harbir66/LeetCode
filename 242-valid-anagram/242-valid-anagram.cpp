@@ -6,17 +6,18 @@ public:
         
         if(n!=m) return false;
         
-        unordered_map<char,int> mp;
+        int mp[26]={};
         
         for(int i=0;i<n;++i){
-            mp[s[i]]++;
+            mp[s[i]-'a']++;
         }
         for(int i=0;i<m;++i){
-            mp[t[i]]--;
+            if(mp[t[i]-'a']==0) return false;
+            mp[t[i]-'a']--;
         } 
-
-        for(auto i=mp.begin();i!=mp.end();++i){
-            if(i->second>0 || i->second<0) return false;
+        
+        for(auto m:mp){
+            if(m>0) return false;
         }
         return true;
     }
