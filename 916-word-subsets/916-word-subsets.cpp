@@ -22,7 +22,7 @@ public:
         // print(mp2);
         for(int i=0;i<words1.size();++i){
             ans.push_back(words1[i]);
-            cout<<ans[ans.size()-1]<<endl;
+            // cout<<ans[ans.size()-1]<<endl;
             for(int j=0;j<words1[i].size();++j){
                 ++mp1[words1[i][j]];
             }
