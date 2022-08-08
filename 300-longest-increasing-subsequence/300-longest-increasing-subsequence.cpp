@@ -1,8 +1,6 @@
 class Solution {    
 public:
     int lengthOfLIS(vector<int>& nums) {
-        // int count=0;
-        // count=help(nums,0,nums.size());
         int n=nums.size();
         vector<int> dp(n,1);
         for(int i=0;i<n;++i){
@@ -17,6 +15,5 @@ public:
             ans=max(ans,x);
         }
         return ans;
-        // return count;
     }
 };
